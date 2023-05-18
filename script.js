@@ -8,3 +8,4 @@ list.append(3);
 console.log(list.toString());
 list.prepend(9);
 console.log(list.toString());
+console.log(list.size());
