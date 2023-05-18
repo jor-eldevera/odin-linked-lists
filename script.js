@@ -9,3 +9,5 @@ console.log(list.toString());
 list.prepend(9);
 console.log(list.toString());
 console.log(list.size());
+console.log(list.head());
+console.log(list.tail());
