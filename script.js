@@ -20,3 +20,8 @@ console.log(list.contains(5));
 console.log(list.contains(12));
 console.log(list.find(4));
 console.log(list.find(12));
+
+list.insertAt(12, 0);
+console.log(list.toString());
+list.insertAt(7, 4);
+console.log(list.toString());
