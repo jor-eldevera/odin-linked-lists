@@ -18,3 +18,5 @@ list.append(4);
 console.log(list.toString());
 console.log(list.contains(5));
 console.log(list.contains(12));
+console.log(list.find(4));
+console.log(list.find(12));
