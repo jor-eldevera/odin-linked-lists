@@ -13,3 +13,8 @@ console.log(list.head());
 console.log(list.tail());
 list.pop();
 console.log(list.toString());
+list.append(5);
+list.append(4);
+console.log(list.toString());
+console.log(list.contains(5));
+console.log(list.contains(12));
