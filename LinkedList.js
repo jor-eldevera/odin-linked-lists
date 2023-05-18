@@ -110,7 +110,7 @@ export default class LinkedList {
 
     insertAt(value, index) {
         if (index < 0) {
-            console.error("insertAt: index must be greater than 0");
+            console.error("insertAt: index must be greater than or equal to 0");
         }
 
         let currentIndex = 0;
@@ -132,5 +132,28 @@ export default class LinkedList {
                 this.list = newNode;
             }
         }
+    }
+
+    removeAt(index) {
+        if (index < 0) {
+            console.error("removeAt: index must be greater than or equal to 0");
+            return;
+        }
+        if (index >= this.size()) {
+            console.error("removeAt: index out of the range of this LinkedList");
+            return;
+        }
+
+        if (index === 0) {
+            this.list = this.list.nextNode;
+            return;
+        }
+
+        if (index === this.size() - 1) {
+            this.at(index - 1).nextNode = null;
+            return;
+        }
+
+        this.at(index - 1).nextNode = this.at(index).nextNode;
     }
 }
