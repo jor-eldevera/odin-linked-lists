@@ -96,10 +96,10 @@ export default class LinkedList {
         let returnString = "";
         let currentNode = this.list;
         while (currentNode !== null) {
-            returnString += currentNode.toString() + " ";
+            returnString += "( " + currentNode.toString() + " ) -> ";
             currentNode = currentNode.nextNode;
         }
-
+        returnString += "null";
         return returnString;
     }
 }
