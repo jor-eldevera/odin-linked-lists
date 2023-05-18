@@ -14,6 +14,13 @@ export default class LinkedList {
         currentNode.nextNode.setValue(value);
     }
 
+    prepend(value) {
+        let newNode = new Node();
+        newNode.setValue(value);
+        newNode.setNextNode(this.list);
+        this.list = newNode;
+    }
+
     at(index) {
         let currentNode = this.list;
         for (let i = 0; i < index; i++) {
