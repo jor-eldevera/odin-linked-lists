@@ -55,6 +55,19 @@ export default class LinkedList {
         return currentNode;
     }
 
+    pop() {
+        let currentNode = this.list;
+        if (currentNode.nextNode === null) {
+            this.list = null;
+            return;
+        }
+
+        while (currentNode.nextNode.nextNode !== null) {
+            currentNode = currentNode.nextNode;
+        }
+        currentNode.nextNode = null;
+    }
+
     toString() {
         let returnString = "";
         let currentNode = this.list;
