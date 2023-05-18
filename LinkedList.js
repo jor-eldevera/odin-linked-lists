@@ -79,6 +79,19 @@ export default class LinkedList {
         return false;
     }
 
+    find(value) {
+        let currentNode = this.list;
+        let index = 0;
+        while (currentNode !== null) {
+            if (currentNode.value === value) {
+                return index;
+            }
+            index++;
+            currentNode = currentNode.nextNode;
+        }
+        return null;
+    }
+
     toString() {
         let returnString = "";
         let currentNode = this.list;
