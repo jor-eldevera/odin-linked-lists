@@ -21,6 +21,16 @@ export default class LinkedList {
         this.list = newNode;
     }
 
+    size() {
+        let size = 0;
+        let currentNode = this.list;
+        while (currentNode !== null) {
+            size++;
+            currentNode = currentNode.nextNode;
+        }
+        return size;
+    }
+
     at(index) {
         let currentNode = this.list;
         for (let i = 0; i < index; i++) {
